@@ -162,7 +162,36 @@ a:active {
     color: var(--color-acento);
 }
 
-/* h3 Servicios */
+/* logos */
+
+.certificaciones-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 25px;
+}
+
+.certificaciones-logos img {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+}
 
 
+/* PDF */
 
+.btn-pdf {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    background: #c62828;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn-pdf:hover {
+    background: #a61d1d;
+}
