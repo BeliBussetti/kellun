@@ -195,3 +195,145 @@ a:active {
 .btn-pdf:hover {
     background: #a61d1d;
 }
+
+
+/* FIX Bootstrap */
+
+/* Fondo general */
+body {
+    background-color: var(--color-fondo) !important;
+    color: var(--color-texto) !important;
+}
+
+/* Secciones */
+section {
+    background-color: var(--color-seccion) !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-texto) !important;
+}
+
+/* Párrafos */
+p {
+    color: var(--color-gris) !important;
+}
+
+/* Listas */
+ul, li {
+    color: var(--color-gris) !important;
+}
+
+/* Links */
+a {
+    color: var(--color-texto) !important;
+}
+
+a:hover {
+    color: var(--color-acento) !important;
+}
+
+
+/* Carrusel */
+
+#carouselInicio img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    #carouselInicio img {
+        height: 220px;
+    }
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.logo-link h1 {
+    margin: 0;
+}
+
+/* RESPONSIVE: móviles y tablets hasta 768px */
+@media (max-width: 768px) {
+
+    /* Header: logo a la izquierda, botón a la derecha */
+    .header-contenido {
+        flex-direction: row;        /* fila en vez de columna */
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 16px;
+    }
+
+    /* Mostrar botón hamburguesa en mobile */
+    .menu-toggle {
+        display: block;
+        font-size: 1.8rem;
+        background: none;
+        border: none;
+        color: var(--color-texto);
+        cursor: pointer;
+        z-index: 1200;
+    }
+
+    /* Navegación oculta por defecto y desplegable */
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #181818;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.28s ease;
+        z-index: 1100;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 12px 0;
+        text-align: center;
+        gap: 12px;
+    }
+
+    nav.open {
+        max-height: 320px; /* ajustá si necesitás más */
+    }
+
+    /* Secciones: más compactas en mobile */
+    section {
+        margin: 18px 12px;
+        padding: 20px 14px;
+    }
+
+    section h2 {
+        font-size: 1.4rem;
+    }
+
+    /* Logos y PDF */
+    .certificaciones-logos {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .certificaciones-logos img {
+        width: 180px;
+    }
+
+    .btn-pdf {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Carrusel ajustado */
+    #carouselInicio img {
+        height: 220px;
+    }
+}
